@@ -18,13 +18,18 @@ const priceColor = computed(() => {
 
   return 'text-green-700'
 })
+
+// first car image
+const imageSrc = computed(() => {
+  return '/images/' + props.car.pictures[0]
+})
 </script>
 
 <template>
   <div
     class="w-full rounded-xl bg-gray-300 h-[90%] overflow-hidden space-y-2 shadow-lg shadow-gray-800"
   >
-    <img src="/images/car.png" :alt="car.model" class="w-full h-1/2 object-cover" />
+    <img :src="imageSrc" :alt="car.model" class="w-full h-1/2 object-cover" />
     <div class="space-y-4 p-2 text-lg">
       <h2 class="text-2xl font-bold">{{ car.brand }} {{ car.model }}</h2>
       <div class="flex flex-row space-x-6 items-center">
