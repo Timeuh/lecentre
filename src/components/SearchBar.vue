@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useCarStore } from '@/stores/carStore'
+import { storeToRefs } from 'pinia'
+
+// get car store
+const carStore = useCarStore()
+const { departmentList } = storeToRefs(carStore)
+</script>
 
 <template>
   <div class="rounded-full border-2 border-gray-700 p-2 w-3/5 mt-8">
@@ -9,6 +16,9 @@
     />
     <select name="department" id="department" class="outline-none w-[30%] px-4">
       <option value="none">Aucun filtre</option>
+      <option v-for="dept in departmentList" :key="dept" :value="dept">
+        {{ dept }}
+      </option>
     </select>
   </div>
 </template>
