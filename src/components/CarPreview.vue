@@ -4,6 +4,7 @@ import Fuel from '@/components/icons/Fuel.vue'
 import Route from '@/components/icons/Route.vue'
 import Pin from '@/components/icons/Pin.vue'
 import Heart from '@/components/icons/Heart.vue'
+import Details from '@/components/icons/Details.vue'
 import { formatNumber } from '@/functions/format_number'
 import { computed } from 'vue'
 import { useUserStore } from '@/stores/userStore'
@@ -55,7 +56,14 @@ const toggleFavorite = () => {
     </div>
     <img :src="imageSrc" :alt="car.model" class="w-full h-1/2 object-cover" />
     <div class="space-y-4 p-2 text-lg">
-      <h2 class="text-2xl font-bold">{{ car.brand }} {{ car.model }}</h2>
+      <div class="flex flex-row space-x-6 items-center justify-between">
+        <h2 class="text-2xl font-bold">{{ car.brand }} {{ car.model }}</h2>
+        <RouterLink
+          :to="'/car/' + listingIndex"
+          class="p-1 rounded-md bg-gray-200 shadow-xs shadow-gray-700"
+          ><Details
+        /></RouterLink>
+      </div>
       <div class="flex flex-row space-x-6 items-center">
         <div class="flex flex-row items-center space-x-2">
           <Fuel />
