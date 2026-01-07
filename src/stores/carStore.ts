@@ -19,5 +19,16 @@ export const useCarStore = defineStore('car', () => {
     carsToDisplay.value = cars
   }
 
-  return { carsToDisplay, resetCars, departmentList }
+  /**
+   * Filter cars listings by their department
+   *
+   * @param department {number} : departement number
+   */
+  function filterByDepartment(department: number) {
+    carsToDisplay.value = carsToDisplay.value.filter((car: Car) => {
+      return car.department === department
+    })
+  }
+
+  return { carsToDisplay, resetCars, departmentList, filterByDepartment }
 })
