@@ -9,7 +9,7 @@ import { useUserStore } from '@/stores/userStore'
 // get car store
 const carStore = useCarStore()
 const { carsToDisplay } = storeToRefs(carStore)
-const { initCars } = carStore
+const { resetCars } = carStore
 
 // get user store
 const userStore = useUserStore()
@@ -17,7 +17,7 @@ const { favorites } = storeToRefs(userStore)
 
 // when mounted, init cars to display
 onMounted(() => {
-  initCars()
+  resetCars()
 })
 </script>
 

@@ -15,9 +15,9 @@ export const useCarStore = defineStore('car', () => {
   })
 
   // copy cars into display cars
-  function initCars() {
+  function resetCars() {
     carsToDisplay.value = cars
   }
 
-  return { carsToDisplay, initCars, departmentList }
+  return { carsToDisplay, resetCars, departmentList }
 })
