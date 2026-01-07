@@ -30,5 +30,17 @@ export const useCarStore = defineStore('car', () => {
     })
   }
 
-  return { carsToDisplay, resetCars, departmentList, filterByDepartment }
+  /**
+   * Search a car by its model or brand
+   *
+   * @param search {string} : the search
+   */
+  function searchCar(search: string) {
+    carsToDisplay.value = carsToDisplay.value.filter((car: Car) => {
+      const carName = car.brand.toLowerCase() + car.model.toLowerCase()
+      return carName.includes(search.toLowerCase())
+    })
+  }
+
+  return { carsToDisplay, resetCars, departmentList, filterByDepartment, searchCar }
 })

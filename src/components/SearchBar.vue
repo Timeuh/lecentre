@@ -5,7 +5,7 @@ import { storeToRefs } from 'pinia'
 // get car store
 const carStore = useCarStore()
 const { departmentList } = storeToRefs(carStore)
-const { filterByDepartment, resetCars } = carStore
+const { filterByDepartment, resetCars, searchCar } = carStore
 
 // handle departement filtering
 const handleSelectChange = (event: Event) => {
@@ -19,6 +19,17 @@ const handleSelectChange = (event: Event) => {
     filterByDepartment(Number(target.value))
   }
 }
+
+// handle input search
+const handleSearch = (event: Event) => {
+  const target = event.target as HTMLInputElement
+
+  if (target.value === '') {
+    resetCars()
+  }
+
+  searchCar(target.value)
+}
 </script>
 
 <template>
@@ -27,6 +38,7 @@ const handleSelectChange = (event: Event) => {
       type="text"
       placeholder="Marque ou modèle"
       class="border-r-2 border-gray-600 w-[70%] ps-2 outline-none"
+      @input="handleSearch"
     />
     <select
       name="department"
