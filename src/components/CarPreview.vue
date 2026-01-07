@@ -3,11 +3,13 @@ import type { Car } from '@/types/app-types'
 import Fuel from '@/components/icons/Fuel.vue'
 import Route from '@/components/icons/Route.vue'
 import Pin from '@/components/icons/Pin.vue'
+import Heart from '@/components/icons/Heart.vue'
 import { formatNumber } from '@/functions/format_number'
 import { computed } from 'vue'
 
 const props = defineProps<{
   car: Car
+  isFavorite: boolean
 }>()
 
 // choose color depending on the price
@@ -27,8 +29,11 @@ const imageSrc = computed(() => {
 
 <template>
   <div
-    class="w-full rounded-xl bg-gray-300 h-[90%] overflow-hidden space-y-2 shadow-lg shadow-gray-800"
+    class="w-full relative rounded-xl bg-gray-300 h-[90%] overflow-hidden space-y-2 shadow-lg shadow-gray-800"
   >
+    <div class="absolute top-2 right-2 bg-gray-200 rounded-md p-2">
+      <Heart :is-favorite="isFavorite" />
+    </div>
     <img :src="imageSrc" :alt="car.model" class="w-full h-1/2 object-cover" />
     <div class="space-y-4 p-2 text-lg">
       <h2 class="text-2xl font-bold">{{ car.brand }} {{ car.model }}</h2>
