@@ -8,9 +8,17 @@ import { RouterLink } from 'vue-router'
   >
     <h1 class="text-2xl text-red-700 font-bold">LeCentre</h1>
     <div class="flex flex-row space-x-12 items-center">
-      <RouterLink to="/">Accueil</RouterLink>
-      <RouterLink to="/favorites">Mes favoris</RouterLink>
+      <RouterLink
+        to="/"
+        class="underline underline-offset-5 transition-all duration-300 ease-in-out decoration-transparent hover:decoration-gray-700"
+        >Accueil</RouterLink
+      >
+      <RouterLink
+        to="/favorites"
+        class="underline underline-offset-5 transition-all duration-300 ease-in-out decoration-transparent hover:decoration-gray-700"
+        >Mes favoris</RouterLink
+      >
     </div>
-    <RouterLink to="/account">Mon compte</RouterLink>
+    <div />
   </nav>
 </template>
