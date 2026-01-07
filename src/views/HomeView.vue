@@ -26,7 +26,7 @@ onMounted(() => {
   >
     <section class="w-full grid grid-cols-5 gap-12 justify-center">
       <div v-for="(car, index) in carsToDisplay">
-        <CarPreview :car="car" :is-favorite="favorites.includes(index)" />
+        <CarPreview :car="car" :is-favorite="favorites.includes(index)" :listing-index="index" />
       </div>
     </section>
   </main>

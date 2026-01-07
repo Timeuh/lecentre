@@ -6,11 +6,17 @@ import Pin from '@/components/icons/Pin.vue'
 import Heart from '@/components/icons/Heart.vue'
 import { formatNumber } from '@/functions/format_number'
 import { computed } from 'vue'
+import { useUserStore } from '@/stores/userStore'
 
 const props = defineProps<{
   car: Car
   isFavorite: boolean
+  listingIndex: number
 }>()
+
+// get user favorites store
+const userStore = useUserStore()
+const { addFavorite, removeFavorite } = userStore
 
 // choose color depending on the price
 const priceColor = computed(() => {
@@ -25,13 +31,26 @@ const priceColor = computed(() => {
 const imageSrc = computed(() => {
   return '/images/' + props.car.pictures[0]
 })
+
+// add or remove this listing from the favorites
+const toggleFavorite = () => {
+  if (props.isFavorite) {
+    removeFavorite(props.listingIndex)
+    return
+  }
+
+  addFavorite(props.listingIndex)
+}
 </script>
 
 <template>
   <div
     class="w-full relative rounded-xl bg-gray-300 h-[90%] overflow-hidden space-y-2 shadow-lg shadow-gray-800"
   >
-    <div class="absolute top-2 right-2 bg-gray-200 rounded-md p-2">
+    <div
+      class="absolute top-2 right-2 bg-gray-200 rounded-md p-2 hover:cursor-pointer"
+      @click="toggleFavorite()"
+    >
       <Heart :is-favorite="isFavorite" />
     </div>
     <img :src="imageSrc" :alt="car.model" class="w-full h-1/2 object-cover" />
