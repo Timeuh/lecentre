@@ -23,19 +23,19 @@ export const useUserStore = defineStore('user', () => {
   /**
    * Add a car listing to favorites
    *
-   * @param index {number} : the index of the favorite in the cars array
+   * @param id {number} : the id of the car
    */
-  function addFavorite(index: number) {
-    favorites.value.push(index)
+  function addFavorite(id: number) {
+    favorites.value.push(id)
   }
 
   /**
    * Remove a car listing from the favorites
    *
-   * @param favoriteValue {number} : the index of the favorite in the cars array
+   * @param id {number} : the id of the car
    */
-  function removeFavorite(favoriteValue: number) {
-    favorites.value = favorites.value.filter((favorite: number) => favorite !== favoriteValue)
+  function removeFavorite(id: number) {
+    favorites.value = favorites.value.filter((favorite: number) => favorite !== id)
   }
 
   return { favorites, addFavorite, removeFavorite }

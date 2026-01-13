@@ -27,8 +27,8 @@ onMounted(() => {
   >
     <SearchBar />
     <section class="w-full grid grid-cols-5 gap-12 justify-center">
-      <div v-for="(car, index) in carsToDisplay">
-        <CarPreview :car="car" :is-favorite="favorites.includes(index)" :listing-index="index" />
+      <div v-for="car in carsToDisplay">
+        <CarPreview :car="car" :is-favorite="favorites.includes(car.id)" />
       </div>
     </section>
   </main>

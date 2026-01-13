@@ -12,7 +12,6 @@ import { useUserStore } from '@/stores/userStore'
 const props = defineProps<{
   car: Car
   isFavorite: boolean
-  listingIndex: number
 }>()
 
 // get user favorites store
@@ -36,11 +35,11 @@ const imageSrc = computed(() => {
 // add or remove this listing from the favorites
 const toggleFavorite = () => {
   if (props.isFavorite) {
-    removeFavorite(props.listingIndex)
+    removeFavorite(props.car.id)
     return
   }
 
-  addFavorite(props.listingIndex)
+  addFavorite(props.car.id)
 }
 </script>
 
@@ -59,7 +58,7 @@ const toggleFavorite = () => {
       <div class="flex flex-row space-x-6 items-center justify-between">
         <h2 class="text-2xl font-bold">{{ car.brand }} {{ car.model }}</h2>
         <RouterLink
-          :to="'/car/' + listingIndex"
+          :to="'/car/' + car.id"
           class="p-1 rounded-md bg-gray-200 shadow-xs shadow-gray-700"
           ><Details
         /></RouterLink>
