@@ -3,6 +3,7 @@ import type { Car } from '@/types/app-types'
 // 50 random cars
 export const cars: Array<Car> = [
   {
+    id: 1,
     model: '2',
     brand: 'Mazda',
     year: 2016,
@@ -16,6 +17,7 @@ export const cars: Array<Car> = [
     pictures: ['mazda2-1.png', 'mazda2-2.png', 'mazda2-3.png'],
   },
   {
+    id: 2,
     model: 'Clio',
     brand: 'Renault',
     year: 2018,
@@ -29,6 +31,7 @@ export const cars: Array<Car> = [
     pictures: ['clio-1.png', 'clio-2.png', 'clio-3.png'],
   },
   {
+    id: 3,
     model: '208',
     brand: 'Peugeot',
     year: 2019,
@@ -42,6 +45,7 @@ export const cars: Array<Car> = [
     pictures: ['208-1.png', '208-2.png', '208-3.png'],
   },
   {
+    id: 4,
     model: 'Golf',
     brand: 'Volkswagen',
     year: 2017,
@@ -55,6 +59,7 @@ export const cars: Array<Car> = [
     pictures: ['golf-1.png', 'golf-2.png', 'golf-3.png'],
   },
   {
+    id: 5,
     model: 'A3',
     brand: 'Audi',
     year: 2016,
@@ -68,6 +73,7 @@ export const cars: Array<Car> = [
     pictures: ['a3-1.png', 'a3-2.png', 'a3-3.png'],
   },
   {
+    id: 6,
     model: 'Serie 1',
     brand: 'BMW',
     year: 2018,
@@ -81,6 +87,7 @@ export const cars: Array<Car> = [
     pictures: ['bmw1-1.png', 'bmw1-2.png', 'bmw1-3.png'],
   },
   {
+    id: 7,
     model: 'Corsa',
     brand: 'Opel',
     year: 2015,
@@ -94,6 +101,7 @@ export const cars: Array<Car> = [
     pictures: ['corsa-1.png', 'corsa-2.png', 'corsa-3.png'],
   },
   {
+    id: 8,
     model: 'Polo',
     brand: 'Volkswagen',
     year: 2020,
@@ -107,6 +115,7 @@ export const cars: Array<Car> = [
     pictures: ['polo-1.png', 'polo-2.png', 'polo-3.png'],
   },
   {
+    id: 9,
     model: 'Fiesta',
     brand: 'Ford',
     year: 2017,
@@ -120,6 +129,7 @@ export const cars: Array<Car> = [
     pictures: ['fiesta-1.png', 'fiesta-2.png', 'fiesta-3.png'],
   },
   {
+    id: 10,
     model: 'Yaris',
     brand: 'Toyota',
     year: 2019,
@@ -132,9 +142,8 @@ export const cars: Array<Car> = [
     options: ['GPS', 'Caméra de recul'],
     pictures: ['yaris-1.png', 'yaris-2.png', 'yaris-3.png'],
   },
-
-  // 40 suivants
   {
+    id: 11,
     model: 'Corolla',
     brand: 'Toyota',
     year: 2015,
@@ -148,6 +157,7 @@ export const cars: Array<Car> = [
     pictures: ['corolla-1.png', 'corolla-2.png', 'corolla-3.png'],
   },
   {
+    id: 12,
     model: 'Megane',
     brand: 'Renault',
     year: 2016,
@@ -161,6 +171,7 @@ export const cars: Array<Car> = [
     pictures: ['megane-1.png', 'megane-2.png', 'megane-3.png'],
   },
   {
+    id: 13,
     model: 'Focus',
     brand: 'Ford',
     year: 2018,
@@ -174,6 +185,7 @@ export const cars: Array<Car> = [
     pictures: ['focus-1.png', 'focus-2.png', 'focus-3.png'],
   },
   {
+    id: 14,
     model: '308',
     brand: 'Peugeot',
     year: 2017,
@@ -187,6 +199,7 @@ export const cars: Array<Car> = [
     pictures: ['308-1.png', '308-2.png', '308-3.png'],
   },
   {
+    id: 15,
     model: 'A4',
     brand: 'Audi',
     year: 2015,
@@ -200,6 +213,7 @@ export const cars: Array<Car> = [
     pictures: ['a4-1.png', 'a4-2.png', 'a4-3.png'],
   },
   {
+    id: 16,
     model: 'i30',
     brand: 'Hyundai',
     year: 2017,
@@ -213,6 +227,7 @@ export const cars: Array<Car> = [
     pictures: ['i30-1.png', 'i30-2.png', 'i30-3.png'],
   },
   {
+    id: 17,
     model: 'Ceed',
     brand: 'Kia',
     year: 2018,
@@ -226,6 +241,7 @@ export const cars: Array<Car> = [
     pictures: ['ceed-1.png', 'ceed-2.png', 'ceed-3.png'],
   },
   {
+    id: 18,
     model: 'Leon',
     brand: 'Seat',
     year: 2019,
@@ -239,6 +255,7 @@ export const cars: Array<Car> = [
     pictures: ['leon-1.png', 'leon-2.png', 'leon-3.png'],
   },
   {
+    id: 19,
     model: 'Fabia',
     brand: 'Skoda',
     year: 2016,
@@ -252,6 +269,7 @@ export const cars: Array<Car> = [
     pictures: ['fabia-1.png', 'fabia-2.png', 'fabia-3.png'],
   },
   {
+    id: 20,
     model: 'C3',
     brand: 'Citroën',
     year: 2018,
@@ -265,6 +283,7 @@ export const cars: Array<Car> = [
     pictures: ['c3-1.png', 'c3-2.png', 'c3-3.png'],
   },
   {
+    id: 21,
     model: 'C4',
     brand: 'Citroën',
     year: 2017,
@@ -278,6 +297,7 @@ export const cars: Array<Car> = [
     pictures: ['c4-1.png', 'c4-2.png', 'c4-3.png'],
   },
   {
+    id: 22,
     model: 'Passat',
     brand: 'Volkswagen',
     year: 2016,
@@ -291,6 +311,7 @@ export const cars: Array<Car> = [
     pictures: ['passat-1.png', 'passat-2.png', 'passat-3.png'],
   },
   {
+    id: 23,
     model: 'Tiguan',
     brand: 'Volkswagen',
     year: 2018,
@@ -304,6 +325,7 @@ export const cars: Array<Car> = [
     pictures: ['tiguan-1.png', 'tiguan-2.png', 'tiguan-3.png'],
   },
   {
+    id: 24,
     model: 'X1',
     brand: 'BMW',
     year: 2017,
@@ -317,6 +339,7 @@ export const cars: Array<Car> = [
     pictures: ['x1-1.png', 'x1-2.png', 'x1-3.png'],
   },
   {
+    id: 25,
     model: 'Q3',
     brand: 'Audi',
     year: 2018,
@@ -330,6 +353,7 @@ export const cars: Array<Car> = [
     pictures: ['q3-1.png', 'q3-2.png', 'q3-3.png'],
   },
   {
+    id: 26,
     model: 'Kadjar',
     brand: 'Renault',
     year: 2019,
@@ -343,6 +367,7 @@ export const cars: Array<Car> = [
     pictures: ['kadjar-1.png', 'kadjar-2.png', 'kadjar-3.png'],
   },
   {
+    id: 27,
     model: 'Captur',
     brand: 'Renault',
     year: 2020,
@@ -356,6 +381,7 @@ export const cars: Array<Car> = [
     pictures: ['captur-1.png', 'captur-2.png', 'captur-3.png'],
   },
   {
+    id: 28,
     model: '500',
     brand: 'Fiat',
     year: 2017,
@@ -369,6 +395,7 @@ export const cars: Array<Car> = [
     pictures: ['500-1.png', '500-2.png', '500-3.png'],
   },
   {
+    id: 29,
     model: 'Tipo',
     brand: 'Fiat',
     year: 2018,
@@ -382,6 +409,7 @@ export const cars: Array<Car> = [
     pictures: ['tipo-1.png', 'tipo-2.png', 'tipo-3.png'],
   },
   {
+    id: 30,
     model: 'Jazz',
     brand: 'Honda',
     year: 2016,
@@ -395,6 +423,7 @@ export const cars: Array<Car> = [
     pictures: ['jazz-1.png', 'jazz-2.png', 'jazz-3.png'],
   },
   {
+    id: 31,
     model: 'Swift',
     brand: 'Suzuki',
     year: 2019,
@@ -408,6 +437,7 @@ export const cars: Array<Car> = [
     pictures: ['swift-1.png', 'swift-2.png', 'swift-3.png'],
   },
   {
+    id: 32,
     model: 'Micra',
     brand: 'Nissan',
     year: 2018,
@@ -421,6 +451,7 @@ export const cars: Array<Car> = [
     pictures: ['micra-1.png', 'micra-2.png', 'micra-3.png'],
   },
   {
+    id: 33,
     model: 'Juke',
     brand: 'Nissan',
     year: 2017,
@@ -434,6 +465,7 @@ export const cars: Array<Car> = [
     pictures: ['juke-1.png', 'juke-2.png', 'juke-3.png'],
   },
   {
+    id: 34,
     model: 'CX-3',
     brand: 'Mazda',
     year: 2019,
@@ -447,6 +479,7 @@ export const cars: Array<Car> = [
     pictures: ['cx3-1.png', 'cx3-2.png', 'cx3-3.png'],
   },
   {
+    id: 35,
     model: 'CX-5',
     brand: 'Mazda',
     year: 2018,
@@ -460,6 +493,7 @@ export const cars: Array<Car> = [
     pictures: ['cx5-1.png', 'cx5-2.png', 'cx5-3.png'],
   },
   {
+    id: 36,
     model: 'DS3',
     brand: 'DS',
     year: 2017,
@@ -473,6 +507,7 @@ export const cars: Array<Car> = [
     pictures: ['ds3-1.png', 'ds3-2.png', 'ds3-3.png'],
   },
   {
+    id: 37,
     model: 'DS4',
     brand: 'DS',
     year: 2016,
@@ -486,6 +521,7 @@ export const cars: Array<Car> = [
     pictures: ['ds4-1.png', 'ds4-2.png', 'ds4-3.png'],
   },
   {
+    id: 38,
     model: 'Insignia',
     brand: 'Opel',
     year: 2015,
@@ -499,6 +535,7 @@ export const cars: Array<Car> = [
     pictures: ['insignia-1.png', 'insignia-2.png', 'insignia-3.png'],
   },
   {
+    id: 39,
     model: 'Astra',
     brand: 'Opel',
     year: 2018,
@@ -512,6 +549,7 @@ export const cars: Array<Car> = [
     pictures: ['astra-1.png', 'astra-2.png', 'astra-3.png'],
   },
   {
+    id: 40,
     model: 'S60',
     brand: 'Volvo',
     year: 2017,
@@ -525,6 +563,7 @@ export const cars: Array<Car> = [
     pictures: ['s60-1.png', 's60-2.png', 's60-3.png'],
   },
   {
+    id: 41,
     model: 'V40',
     brand: 'Volvo',
     year: 2018,
@@ -538,6 +577,7 @@ export const cars: Array<Car> = [
     pictures: ['v40-1.png', 'v40-2.png', 'v40-3.png'],
   },
   {
+    id: 42,
     model: 'Sandero',
     brand: 'Dacia',
     year: 2019,
@@ -551,6 +591,7 @@ export const cars: Array<Car> = [
     pictures: ['sandero-1.png', 'sandero-2.png', 'sandero-3.png'],
   },
   {
+    id: 43,
     model: 'Duster',
     brand: 'Dacia',
     year: 2018,
@@ -564,6 +605,7 @@ export const cars: Array<Car> = [
     pictures: ['duster-1.png', 'duster-2.png', 'duster-3.png'],
   },
   {
+    id: 44,
     model: 'Ioniq',
     brand: 'Hyundai',
     year: 2020,
@@ -577,6 +619,7 @@ export const cars: Array<Car> = [
     pictures: ['ioniq-1.png', 'ioniq-2.png', 'ioniq-3.png'],
   },
   {
+    id: 45,
     model: 'Prius',
     brand: 'Toyota',
     year: 2017,
@@ -590,6 +633,7 @@ export const cars: Array<Car> = [
     pictures: ['prius-1.png', 'prius-2.png', 'prius-3.png'],
   },
   {
+    id: 46,
     model: 'Model 3',
     brand: 'Tesla',
     year: 2020,
@@ -603,6 +647,7 @@ export const cars: Array<Car> = [
     pictures: ['model3-1.png', 'model3-2.png', 'model3-3.png'],
   },
   {
+    id: 47,
     model: 'Model S',
     brand: 'Tesla',
     year: 2018,
@@ -616,6 +661,7 @@ export const cars: Array<Car> = [
     pictures: ['models-1.png', 'models-2.png', 'models-3.png'],
   },
   {
+    id: 48,
     model: 'Serie 3',
     brand: 'BMW',
     year: 2017,
@@ -629,6 +675,7 @@ export const cars: Array<Car> = [
     pictures: ['serie3-1.png', 'serie3-2.png', 'serie3-3.png'],
   },
   {
+    id: 49,
     model: 'Classe A',
     brand: 'Mercedes',
     year: 2019,
@@ -642,6 +689,7 @@ export const cars: Array<Car> = [
     pictures: ['classea-1.png', 'classea-2.png', 'classea-3.png'],
   },
   {
+    id: 50,
     model: 'Classe C',
     brand: 'Mercedes',
     year: 2018,

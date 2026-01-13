@@ -6,6 +6,7 @@ export type Motor = 'Diesel' | 'Essence' | 'Hybride' | 'Électrique'
 
 // car
 export type Car = {
+  id: number
   model: string
   brand: string
   year: number
