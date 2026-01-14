@@ -9,12 +9,19 @@ const currentImage = ref<string>(props.images[0] ?? '')
 </script>
 
 <template>
-  <section>
-    <img :src="'/images/' + currentImage" :alt="currentImage" />
-    <div>
-      <img :src="'/images/' + images[0]" :alt="images[0]" />
-      <img :src="'/images/' + images[1]" :alt="images[1]" />
-      <img :src="'/images/' + images[2]" :alt="images[2]" />
+  <section class="w-[40vw] flex flex-col overflow-hidden rounded-lg">
+    <img
+      class="w-full h-[50vh] border-b-4 border-black object-cover"
+      :src="'/images/' + currentImage"
+      :alt="currentImage"
+    />
+    <div class="flex flex-row w-full">
+      <img
+        v-for="image in images"
+        class="w-1/3 h-[15vh] object-cover"
+        :src="'/images/' + image"
+        :alt="image"
+      />
     </div>
   </section>
 </template>
