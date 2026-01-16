@@ -5,6 +5,7 @@ import { storeToRefs } from 'pinia'
 import { computed, type ComputedRef } from 'vue'
 import { useRoute } from 'vue-router'
 import ImagesCarousel from '@/components/ImagesCarousel.vue'
+import CarDetails from '@/components/CarDetails.vue'
 
 // get car store
 const carStore = useCarStore()
@@ -25,18 +26,7 @@ const currentCar: ComputedRef<Car | undefined> = computed(() => {
   >
     <div class="flex flex-row items-center justify-between w-4/5" v-if="currentCar">
       <ImagesCarousel :images="currentCar.pictures" />
-      <div>
-        <h2>{{ currentCar.brand }}</h2>
-        <h2>{{ currentCar.model }}</h2>
-        <h2>{{ currentCar.year }}</h2>
-        <h2>{{ currentCar.drove_distance }}</h2>
-        <h2>{{ currentCar.department }}</h2>
-        <h2>{{ currentCar.location }}</h2>
-        <h2>{{ currentCar.motor }}</h2>
-        <h2>{{ currentCar.transmission }}</h2>
-        <h2>{{ currentCar.price }}</h2>
-        <h2>{{ currentCar.options }}</h2>
-      </div>
+      <CarDetails :car="currentCar" />
     </div>
   </main>
 </template>
