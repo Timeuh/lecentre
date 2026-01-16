@@ -19,3 +19,9 @@ export type Car = {
   options: Array<string>
   pictures: Array<string>
 }
+
+// a car aspect like brand or model
+export type CarAspect = {
+  name: string
+  value: string | number | Array<string>
+}
