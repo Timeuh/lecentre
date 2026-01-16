@@ -19,7 +19,7 @@ const handleClick = (index: number) => {
 </script>
 
 <template>
-  <section class="w-[40vw] flex flex-col overflow-hidden rounded-lg">
+  <section class="w-[40vw] flex flex-col overflow-hidden rounded-lg shadow-lg shadow-gray-600">
     <img
       class="w-full h-[50vh] border-b-4 border-black object-cover"
       :src="'/images/' + currentImage"
